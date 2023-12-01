@@ -3,338 +3,255 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './HomePage.css';
-import AgeTofu from './Home Page Images/AgeTofu.png';
-import GyuDon from './Home Page Images/GyuDon.png';
-import PorkBun from './Home Page Images/PorkBun.png';
-import RibeyeDonburi from './Home Page Images/RibeyeDonburi.png';
-import SeafoodRamen from './Home Page Images/SeafoodRamen.png';
-import ShoyuRamen from './Home Page Images/ShoyuRamen.png';
-import SpicyMisoRamen from './Home Page Images/SpicyMisoRamen.png';
-import TakoFry from './Home Page Images/TakoFry.png';
-import Takoyaki from './Home Page Images/Takoyaki.png';
-import TanTanRamen from './Home Page Images/TanTanRamen.png';
-import TempuraDonburi from './Home Page Images/TempuraDonburi.png';
-import TonkotsuRamen from './Home Page Images/TonkotsuRamen.png';
-import Topping1 from './Home Page Images/Topping1.png';
-import Topping2 from './Home Page Images/Topping2.png';
-import Topping3 from './Home Page Images/Topping3.png';
-import Topping4 from './Home Page Images/Topping4.png';
-import Topping5 from './Home Page Images/Topping5.png';
-import Topping6 from './Home Page Images/Topping6.png';
-import Topping7 from './Home Page Images/Topping7.png';
-import Topping8 from './Home Page Images/Topping8.png';
-import Topping9 from './Home Page Images/Topping9.png';
-import Topping10 from './Home Page Images/Topping10.png';
+import Image1 from './Home Page Images/img-1.png';
+import Image2 from './Home Page Images/g4tg4tg.png';
+import Image3 from './Home Page Images/icon-image.png';
+import Image4 from './Home Page Images/abper-300x59.png';
+import Image5 from './Home Page Images/ares-300x53.png';
+import Image6 from './Home Page Images/bromo-300x56.png';
+import Image7 from './Home Page Images/pieso-300x118.png';
+import Image8 from './Home Page Images/wagon-300x60.png';
+import Image9 from './Home Page Images/boson-300x71.png';
+import Image10 from './Home Page Images/94tuhg4t.png';
+import Image11 from './Home Page Images/accident.png';
+import Image12 from './Home Page Images/g53.png';
+import Image13 from './Home Page Images/motorbike.png';
+import Image14 from './Home Page Images/tow-truck.png';
+import Image15 from './Home Page Images/road.png';
 
+const customerData = () => {
+    // const firstName = document.getElementById('firstName').value;
+    console.log('Button clicked!');
+};
+const checkClick = () => {
+    console.log('Clicked!');
+};
 export const HomePage = () => {
     return (
         <div>
-            <div class="banner container-fluid text-center d-flex justify-content-center align-items-center flex-column pt-5">
-			
-                <div class="row col-12 pt-5">
-                    <h1>Welcome to Tento Ramen</h1>
-                    <p>Delivering Japanese ramen and Rice bowl.</p>
+            <main>
+                <div className="main_banner">
+                    <div className="container main_banner_wrapper">
+                        <div className="main_banner_left">
+                            <h3>Vận tải Phước Tá</h3>
+                            <h2>NÂNG NIU TRÊN TỪNG CÂY SỐ</h2>
+                            <p>Hà Lâm cung cấp các dịch vụ vận chuyển hàng hóa chất lượng cao, từ các dịch vụ chuyển hàng tiêu chuẩn cho đến hàng siêu
+                            trường siêu trọng.</p>
+                            <button href="#" className="button">Bắt đầu</button>
+                        </div>
+                        <div className="main_banner_right">
+                            <img src={Image1} alt="" />
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="button order col-xl-2 col-5">
-                    <a href="/cart" class="btn rounded-pill btn-lg" style={{ color: '#9a4444', backgroundColor: '#DE8F5F' }}>ORDER NOW</a>
+                <div className="main_infor">
+                    <div className="container main_infor_wrapper">
+                        <div className="main_infor_item">
+                            <span>
+                                <i className="fa-solid fa-phone-volume"></i>
+                            </span>
+                            <span>(055) 123 456</span>
+                        </div>
+                        <div className="main_infor_item">
+                        <span><i className="fa-solid fa-clock"></i></span>
+                            <span>Arriving in 30 min</span>
+                        </div>
+                        <div className="main_infor_item">
+                            <span><i className="fa-solid fa-circle-check"></i></span>
+                            <span>No hidden fees</span>
+                        </div>
+                    </div>
                 </div>
-                    
-            </div>
-        
-            <div class="third container-fluid">
-                
-                <div class="fav-title row text-center pt-5 pb-4" style={{color: '#9a4444'}}>
-                    <h1 style={{fontSize: '40px'}}>FAVORITE DISH</h1>
+                <div className="container">
+                    <div className="main_intro">
+                        <div className="main_intro_left">
+                            <img src={Image2} alt="" />
+                            <span>
+                                <img src={Image3} alt="" />
+                            </span>
+                        </div>
+                        <div className="main_intro_right">
+                            <h3>Tại sao chọn chúng tôi</h3>
+                            <h2>GIỚI THIỆU VẬN TẢI PHƯỚC TÁ</h2>
+                            <p>Công Ty TNHH Dịch Vụ Vận Tải Hà Lâm được thành lập vào năm 2012, với kinh nghiệm 10 năm hoạt động trong ngành vận tải
+                            chúng tôi luôn đảm bảo hàng hóa được vận chuyển an toàn và đúng thời gian cho quý khách hàng. <br/><br />
+                            
+                            Vận Tải Hà Lâm chuyên vận chuyển hàng hóa từ Bắc vào Nam và các tỉnh nhỏ lẻ, với đội ngũ lái xe có nhiều năm kinh nghiệm
+                            chạy xuyên suốt trên các tuyến đường trên lãnh thổ Việt Nam.<br/><br/>
+                            
+                            Hiện tại, vận tải Hà Lâm có nhiều dịch vụ trong ngành vận tải để phục vụ khách hàng, Trong đó, dịch vụ vận chuyển hàng
+                            hóa được ưu tiên và chú trọng nhất với mục tiêu đáp ứng nhanh nhất những yêu cầu về vận chuyển hàng hóa. Nếu quý khách
+                            có nhu cầu vận chuyển hàng hóa đến bất kỳ nơi nào, chúng tôi đều có khả năng đáp ứng.</p>
+                            <button className="button">Call us now</button>
+                        </div>
+                    </div>
+                    <div className="main_brand">
+                        <span>
+                            <img src={Image4} alt="" />
+                        </span>
+                        <span>
+                            <img src={Image5} alt="" />
+                        </span>
+                        <span>
+                            <img src={Image6} alt="" />
+                        </span>
+                        <span>
+                            <img src={Image7} alt="" />
+                        </span>
+                        <span>
+                            <img src={Image8} alt="" />
+                        </span>
+                        <span>
+                            <img src={Image9} alt="" />
+                        </span>
+                    </div>
                 </div>
-            
-                <div class="row text-center row-gap-3">
-                
-                    <div class="col-lg-4 col-12 d-flex justify-content-center align-items-center">
-                    
-                        <div class="card d-flex justify-content-center align-items-center" style={{ height: '500px', width: '450px', borderRadius: '30px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none' }}>
-                            <img src={PorkBun} class="card-img-top" alt="Pork Bun" style={{ height: 'auto', width: '290px', position: 'relative', top: '-40px' }} />
-                            <div class="bun-card-body" style={{ width: '90%', position: 'relative', top: '-35px' }}>
-                                <h5 class="card-title border rounded-pill d-flex justify-content-center align-items-center border-0" style={{ height: '50px', backgroundColor: '#9a4444', fontSize: '27px', fontFamily: 'Righteous, sans-serif', color: '#F4DFB6' }}>Pork Bun</h5>
-                                <p class="bun-text card-text" style={{ fontSize: '15px', fontFamily: 'Titillium Web, sans-serif', color: '#9a4444', position: 'relative' }}>Chased pork with romaine heart.</p>
+                <div className="main_bg">
+                    <img src={Image10} alt="" />
+                </div>
+                <div className="container">
+                    <div className="service">
+                        <h3>OUR SERVICES</h3>
+                        <h2>We transport your vehicle safely and efficiently</h2>
+                        <p>We are a well-equipped towing service available to help with towing a car 24/7 we provide a fast, affordable, friendly,
+                        and reliable car towing service.</p>
+                        <div className="service_list">
+                            <div className="service_list_top">
+                                <div className="service_list_item">
+                                    <span className="icon">
+                                        <img src={Image11} alt="" />
+                                    </span>
+                                    <h4>Emergency towing service</h4>
+                                    <p>We are a well-equipped towing service available to help with towing a car 24/7 we provide a fast, affordable,
+                                        friendly,
+                                        and reliable car towing service.</p>
+                                </div>
+                                <div className="service_list_item">
+                                    <span className="icon">
+                                        <img src={Image12} alt="" />
+                                    </span>
+                                    <h4>25% off emergency road service</h4>
+                                    <p>Favorable offer for new clients. Spend less time on web hosting and more time on your business.</p>
+                                </div>
+                            </div>
+                            <div className="service_list_bottom">
+                                <div className="service_list_item">
+                                    <span className="icon">
+                                        <img src={Image13} alt="" />
+                                    </span>
+                                    <h4>Car towing service</h4>
+                                    <p>We operate new, clean and professional towing vehicles and equipment.</p>
+                                </div>
+                                <div className="service_list_item">
+                                    <span className="icon">
+                                        <img src={Image14} alt="" />
+                                    </span>
+                                    <h4>Motorcycle towing</h4>
+                                    <p>We operate new, clean and professional towing vehicles and equipment.</p>
+                                </div>
+                                <div className="service_list_item">
+                                    <span className="icon">
+                                        <img src={Image15} alt="" />
+                                    </span>
+                                    <h4>Long distance towing</h4>
+                                    <p>We operate new, clean and professional towing vehicles and equipment.</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div className="question">
+                        <h3>FAQ</h3>
+                        <h2>Popular questions answered</h2>
+                        <p>We are a well-equipped towing service available to help with towing a car 24/7 we provide a fast, affordable, friendly,
+                        and reliable car towing service.</p>
+                        <ul className="question_list">
+                            <li>
+                                <span><i className="fa-solid fa-circle-question"></i></span>
+                                <div>
+                                    <h4>How long will I be without my car?</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                    aliqua.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span><i className="fa-solid fa-circle-question"></i></span>
+                                <div>
+                                    <h4>How long will I be without my car?</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                    aliqua.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span><i className="fa-solid fa-circle-question"></i></span>
+                                <div>
+                                    <h4>How long will I be without my car?</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                    aliqua.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span><i className="fa-solid fa-circle-question"></i></span>
+                                <div>
+                                    <h4>How long will I be without my car?</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                    aliqua.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span><i className="fa-solid fa-circle-question"></i></span>
+                                <div>
+                                    <h4>How long will I be without my car?</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                    aliqua.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span><i className="fa-solid fa-circle-question"></i></span>
+                                <div>
+                                    <h4>How long will I be without my car?</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                    aliqua.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="contact">
+                        <h3>Gửi Yêu Cầu Giá Cước Vận Chuyển</h3>
+                        <div className="contact_content">
+                            <form>
+                                <div className="contact_item">
+                                    <label htmlFor="firstName">Tên khách hàng <span>*</span> </label>
+                                    <div>
+                                        <span>
+                                            <input type="text" name="firstName" id="firstName" />
+                                            <label htmlFor="firstName">First</label>
+                                        </span>
+                                        <span>
+                                            <input type="text" name="lastName" id="lastName" />
+                                            <label htmlFor="lastName">Last</label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="contact_item">
+                                    <label htmlFor="email">Email<span>*</span> </label>
+                                    <input type="email" name="email" id="email" />
+                                </div>
+                                <div className="contact_item">
+                                    <label htmlFor="email">Nội dung <span>*</span> </label>
+                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                </div>
+                                <button className="button" onSubmit={checkClick}>Hoàn tất</button>
+                            </form>
+                            <div className="contact_phone">
+                                <h4>Liên hệ để chuyển hàng</h4>
+                                <span className="line"></span>
+                                <p>Hotline: <br/> 0123 456 789</p>
                             </div>
                         </div>
-                    
-                    </div>
-                
-                    <div class="col-lg-4 col-12 d-flex justify-content-center align-items-center">
-                        <div class="card d-flex justify-content-center align-items-center p-5" style={{ height: '500px', width: '450px', borderRadius: '30px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none' }}>
-                            <img src={SpicyMisoRamen} class="card-img-top" alt="Spicy Miso Ramen" style={{ height: 'auto', width: '330px', position: 'absolute', top: '80px' }} />
-                            <div class="miso-card-body" style={{ width: '90%', position: 'absolute', top: '330px' }}>
-                                <h5 class="miso card-title border rounded-pill d-flex justify-content-center align-items-center border-0">Spicy Miso Ramen</h5>
-                                <p class="miso-text card-text">Spicy pork boil with miso, topped with ground pork, fish cake, bean sprouts, corn, egg, chasu pork, bamboo shoots and scallion spicy.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-12 d-flex justify-content-center align-items-center">
-                        <div class="card d-flex justify-content-center align-items-center p-3" style={{ height: '500px', width: '450px', borderRadius: '30px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none' }}>
-                            <img src={TonkotsuRamen} class="card-img-top" alt="Tonkotsu Ramen" style={{ height: 'auto', width: '350px', paddingTop: '10px' }} />
-                            <div class="tonkotsu card-body">
-                                <h5 class="tonkotsu-title card-title border rounded-pill d-flex justify-content-center align-items-center border-0">Tonkotsu Ramen</h5>
-                                <p class="tonkotsu-text card-text">Classic pork, broth, topped with fish cake, egg, chasu pork, bamboo shoots, red ginger and scallion.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            
-            </div>
-        
-        
-            <div class="container-fluid">
-                
-                <div class="menu row text-center pt-5 pb-2">
-                    <h1 style={{fontSize: '40px', fontFamily: 'Righteous, sans-serif', color: '#9a4444' }}>MENU</h1>
-                </div>
-            
-                <div class="line"></div>
-                
-                <div class="appetizer row text-center pt-3 pb-4"> 
-                    <h1 style={{fontSize: '30px', fontFamily: 'Righteous, sans-serif', color: '#9a4444' }}>APPETIZER</h1>
-                </div>
-                
-                
-            
-                <div class="row text-center d-flex justify-content-center">
-                    
-                    <div class="col-1 d-flex justify-content-start align-items-center">
-                        <div class="btn-group" role="group" aria-label="First group">
-                            <button type="button" class="btn rounded-pill border-0" style={{ height: '50px', width: '50px', backgroundColor: '#DE8F5F', color: '#F4DFB6' }}><i class="fa fa-chevron-left fa-xl" style={{paddingTop: '.4rem'}}></i></button>
-                        </div>
-                    </div>
-                
-                    <div class="col-lg-3 col-md-5 col-10 d-flex justify-content-center align-items-center">
-                        <div class="card d-flex justify-content-center align-items-center p-3" style={{ height: '400px', width: '450px', borderRadius: '30px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none' }}>
-                            <img src={AgeTofu} class="card-img-top" alt="Age Tofu" style={{ position: 'relative', top: '50px', height: 'auto', width: '250px' }} />
-                            <div class="card-body" style={{ position: 'relative', top: '75px', width: '110%' }}>
-                                <h5 class="card-title border rounded-pill d-flex justify-content-center align-items-center border-0" style={{height: '50px', backgroundColor: '#9a4444', fontSize: '25px', fontFamily: 'Righteous, sans-serif', color: '#F4DFB6' }}>Age Tofu</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-5 d-flex justify-content-center align-items-center d-md-flex d-none">
-                        <div class="card d-flex justify-content-center align-items-center p-3" style={{ height: '400px', width: '450px', borderRadius: '30px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none' }}>
-                            <img src={Takoyaki} class="card-img-top" alt="Takoyaki" style={{ position: 'relative', top: '50px', height: 'auto', width: '250px' }} />
-                            <div class="card-body" style={{position: 'relative', top: '58px', width: '110%' }}>
-                                <h5 class="card-title border rounded-pill d-flex justify-content-center align-items-center border-0" style={{height: '50px', backgroundColor: '#9a4444', fontSize: '25px', fontFamily: 'Righteous, sans-serif', color: '#F4DFB6' }}>Takoyaki</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-0 d-flex justify-content-center align-items-center d-lg-flex d-none">
-                        <div class="card d-flex justify-content-center align-items-center p-3" style={{ height: '400px', width: '450px', borderRadius: '30px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none' }}>
-                            <img src={TakoFry} class="card-img-top" alt="Tako Fry" style={{height: 'auto', width: '260px'}} />
-                            <div class="card-body" style={{position: 'relative', top: '-20px', width: '110%' }}>
-                                <h5 class="card-title border rounded-pill d-flex justify-content-center align-items-center border-0" style={{height: '50px', backgroundColor: '#9a4444', fontSize: '25px', fontFamily: 'Righteous, sans-serif', color: '#F4DFB6' }}>Tako Fry</h5>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="col-1 d-flex justify-content-end align-items-center">
-                        <div class="btn-group" role="group" aria-label="First group">
-                            <button type="button" class="btn rounded-pill border-0" style={{height: '50px', width: '50px', backgroundColor: '#DE8F5F', color: '#F4DFB6' }}><i class="fa fa-chevron-right fa-xl" style={{paddingTop: '.4rem'}}></i></button>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        
-        
-            <div class="five container-fluid">
-            
-                <div class="LS pt-5">
-                    <div class="line"></div>
-                </div>
-                
-                <div class="donburi-title text-center d-flex flex-row justify-content-center align-items-center pt-2 pb-4">
-                    <h1 style={{fontSize: '30px', fontFamily: 'Righteous, sans-serif', color: '#9a4444'}}>DONBURI</h1>
-                    <p class="pt-2 ps-2" style={{fontSize: '20px', fontFamily: 'Titillium Web, sans-serif', color: '#9a4444' }}>(RICE BOWL)</p>
-                </div>
-            
-                <div class="row text-center d-flex justify-content-center">
-                
-                    <div class="col-1 d-flex justify-content-start align-items-center">
-                        <div class="btn-group" role="group" aria-label="First group">
-                            <button type="button" class="btn rounded-pill border-0" style={{height: '50px', width: '50px', backgroundColor: '#DE8F5F', color: '#F4DFB6' }}><i class="fa fa-chevron-left fa-xl" style={{paddingTop: '.4rem'}}></i></button>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-3 col-md-5 col-10 d-flex justify-content-center align-items-center">
-                        <div class="card d-flex justify-content-center align-items-center p-3" style={{height: '400px', width: '450px', bordeRadius: '30px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none' }}>
-                            <img src={RibeyeDonburi} class="card-img-top" alt="Ribeye Donburi" style={{position: 'relative', top: '-10px', height: 'auto', width: '280px' }} />
-                            <div class="card-body" style={{position: 'relative', top: '-15px', width: '110%' }}>
-                                <h5 class="card-title border rounded-pill d-flex justify-content-center align-items-center border-0" style={{height: '50px', backgroundColor: '#9a4444', fontSize: '25px', fontFamily: 'Righteous, sans-serif', color: '#F4DFB6' }}>Ribeye Donburi</h5>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="col-lg-3 col-md-5 d-flex justify-content-center align-items-center d-md-flex d-none">
-                        <div class="card d-flex justify-content-center align-items-center p-3" style={{height: '400px', width: '450px', bordeRadius: '30px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none' }}>
-                            <img src={TempuraDonburi} class="card-img-top" alt="Tempura Donburi" style={{position: 'relative', top: '-10px', height: 'auto', width: '280px' }} />
-                            <div class="card-body" style={{position: 'relative', top: '-15px', width: '110%' }}>
-                                <h5 class="card-title border rounded-pill d-flex justify-content-center align-items-center border-0" style={{height: '50px', backgroundColor: '#9a4444', fontSize: '22px', fontFamily: 'Righteous, sans-serif', color: '#F4DFB6' }}>Tempura Donburi</h5>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-3 col-0 d-flex justify-content-center align-items-center d-lg-flex d-none">
-                        <div class="card d-flex justify-content-center align-items-center p-3" style={{height: '400px', width: '450px', bordeRadius: '30px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none' }}>
-                            <img src={GyuDon} class="card-img-top" alt="Gyu Don" style={{position: 'relative', top: '-60px', height: 'auto', width: '270px' }} /> 
-                            <div class="card-body" style={{position: 'relative', top: '-75px', width: '110%' }}>
-                                <h5 class="card-title border rounded-pill d-flex justify-content-center align-items-center border-0" style={{height: '50px', backgroundColor: '#9a4444', fontSize: '25px', fontFamily: 'Righteous, sans-serif', color: '#F4DFB6' }}>Gyu Don</h5>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-1 d-flex justify-content-end align-items-center">
-                        <div class="btn-group" role="group" aria-label="First group">
-                            <button type="button" class="btn rounded-pill border-0" style={{height: '50px', width: '50px', backgroundColor: '#DE8F5F', color: '#F4DFB6' }}><i class="fa fa-chevron-right fa-xl" style={{paddingTop: '.4rem;'}}></i></button>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-            </div>
-        
-        
-        <div class="six container-fluid">
-        
-            <div class="LS pt-5">
-                <div class="line"></div>
-            </div>
-            
-            <div class="donburi-title text-center d-flex flex-row justify-content-center align-items-center pt-2 pb-4">
-                <h1 style={{fontSize: '30px', fontFamily: 'Righteous, sans-serif', color: '#9a4444' }}>RAMEN</h1>
-            </div>
-            
-            <div class="row text-center d-flex justify-content-center">
-                
-                <div class="col-1 d-flex justify-content-start align-items-center">
-                    <div class="btn-group" role="group" aria-label="First group">
-                        <button type="button" class="btn rounded-pill border-0" style={{height: '50px', width: '50px', backgroundColor: '#DE8F5F', color: '#F4DFB6' }}><i class="fa fa-chevron-left fa-xl" style={{paddingTop: '.4rem' }}></i></button>
                     </div>
                 </div>
-            
-                <div class="col-lg-3 col-md-5 col-10 d-flex justify-content-center align-items-center">
-                    <div class="card d-flex justify-content-center align-items-center p-3" style={{height: '400px', width: '450px', borderRadius: '30px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none' }}>
-                        <img src={ShoyuRamen} class="card-img-top" alt="Shoyu Ramen" style={{position: 'relative', top: '20px', height: 'auto', width: '250px'}} />
-                        <div class="card-body" style={{position: 'relative', top: '50px', width: '110%'}}>
-                            <h5 class="card-title border rounded-pill d-flex justify-content-center align-items-center border-0" style={{height: '50px', backgroundColor: '#9a4444', fontSize: '25px', fontFamily: 'Righteous, sans-serif', color: '#F4DFB6'}}>Shoyu Ramen</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-5 d-flex justify-content-center align-items-center d-md-flex d-none">
-                    <div class="card d-flex justify-content-center align-items-center p-3" style={{height: '400px', width: '450px', borderRadius: '30px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none' }}>
-                        <img src={SeafoodRamen} class="card-img-top" alt="Seafood Ramen" style={{position: 'relative', top: '10px', height: 'auto', width: '280px'}} />
-                        <div class="card-body" style={{position: 'relative', top: '23px', width: '110%'}}>
-                            <h5 class="card-title border rounded-pill d-flex justify-content-center align-items-center border-0" style={{height: '50px', backgroundColor: '#9a4444', fontSize: '24px', fontFamily: 'Righteous, sans-serif', color: '#F4DFB6'}}>Seafood Ramen</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-0 d-flex justify-content-center align-items-center d-lg-flex d-none">
-                    <div class="card d-flex justify-content-center align-items-center p-3" style={{height: '400px', width: '450px', borderRadius: '30px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none' }}>
-                        <img src={TanTanRamen} class="card-img-top" alt="Tan Tan Ramen" style={{position: 'relative', top: '-5px', height: 'auto', width: '290px'}} />
-                        <div class="card-body" style={{position: 'relative', top: '-20px', width: '110%'}}>
-                            <h5 class="card-title border rounded-pill d-flex justify-content-center align-items-center border-0" style={{height: '50px', backgroundColor: '#9a4444', fontSize: '24px', fontFamily: 'Righteous, sans-serif', color: '#F4DFB6'}}>Tan Tan Ramen</h5>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="col-1 d-flex justify-content-end align-items-center">
-                    <div class="btn-group" role="group" aria-label="First group">
-                        <button type="button" class="btn rounded-pill border-0" style={{height: '50px', width: '50px', backgroundColor: '#DE8F5F', color: '#F4DFB6'}}>
-                            <i class="fa fa-chevron-right fa-xl" style={{paddingTop: '.4rem'}}></i>
-                        </button>
-                    </div>
-                </div>
-                
-            </div>
-    
-        </div>
-        
-        
-        <div class="seven container-fluid">
-        
-            <div class="LS pt-5">
-                <div class="line"></div>
-            </div>
-            
-            <div class="donburi-title text-center d-flex flex-row justify-content-center align-items-center pt-2 pb-4">
-                <h1 style={{fontSize: '30px', fontFamily: 'Righteous, sans-serif', color: '#9a4444'}}>TOPPING</h1>
-            </div>
-        
-            <div class="row text-center d-flex justify-content-center align-items-center">
-            
-                <div class="col-md-1 col-2">
-                    <div class="btn-group" role="group" aria-label="First group">
-                        <button type="button" class="btn rounded-pill border-0" style={{height: '50px', width: '50px', backgroundColor: '#DE8F5F', color: '#F4DFB6', position: 'sticky'}}><i class="fa fa-chevron-left fa-xl" style={{paddingTop: '.4rem'}}></i></button>
-                    </div>
-                </div>
-                
-                <div class="col-md-1 col-2">
-                    <div class="card d-flex justify-content-center align-items-center" style={{height: '80px', width: '80px', borderRadius: '100px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none'}}>
-                        <img src={Topping1} class="card-img-top pe-2" alt="Topping1" style={{height: '50px', width: 'auto'}} />
-                    </div>
-                </div>
-                <div class="col-md-1 col-2">
-                    <div class="card" style={{height: '80px', width: '80px', borderRadius: '100px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none'}}>
-                        <img src={Topping2} class="card-img-top pt-2" alt="Topping2" />
-                    </div>
-                </div>
-                <div class="col-md-1 col-2">
-                    <div class="card" style={{height: '80px', width: '80px', borderRadius: '100px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none'}}>
-                        <img src={Topping3} class="card-img-top pt-2 ps-1" alt="Topping3" style={{height: 'auto', width: '80px'}} />
-                    </div>
-                </div>
-                <div class="col-md-1 col-2">
-                    <div class="card" style={{height: '80px', width: '80px', borderRadius: '100px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none'}}>
-                        <img src={Topping4} class="card-img-top pt-2 ps-2" alt="Topping4" style={{height: 'auto', width: '70px'}} />
-                    </div>
-                </div>
-                <div class="col-md-1 d-md-block d-none">
-                    <div class="card" style={{height: '80px', width: '80px', borderRadius: '100px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none'}}>
-                        <img src={Topping5} class="card-img-top" alt="Topping5" />
-                    </div>
-                </div>
-                <div class="col-md-1 d-md-block d-none">
-                    <div class="card" style={{height: '80px', width: '80px', borderRadius: '100px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none'}}>
-                        <img src={Topping6} class="card-img-top" alt="Topping6" />
-                    </div>
-                </div>
-                <div class="col-md-1 d-md-block d-none">
-                    <div class="card" style={{height: '80px', width: '80px', borderRadius: '100px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none'}}>
-                        <img src={Topping7} class="card-img-top" alt="Topping7" />
-                    </div>
-                </div>
-                <div class="col-md-1 d-md-block d-none">
-                    <div class="card" style={{height: '80px', width: '80px', borderRadius: '100px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none'}}>
-                        <img src={Topping8} class="card-img-top" alt="Topping8" style={{paddingTop: '8px', width: '90%'}} />
-                    </div>
-                </div>
-                <div class="col-md-1 d-lg-block d-none">
-                    <div class="card" style={{height: '80px', width: '80px', borderRadius: '100px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none'}}>
-                        <img src={Topping9} class="card-img-top" alt="Topping9" style={{paddingTop: '10px'}} />
-                    </div>
-                </div>
-                <div class="col-md-1 d-lg-block d-none">
-                    <div class="card" style={{height: '80px', width: '80px', borderRadius: '100px', backgroundColor: 'rgba(222, 143, 95, 0.2)', border: 'none'}}>
-                        <img src={Topping10} class="card-img-top" alt="Topping10" />
-                    </div>
-                </div>
-            
-                <div class="col-md-1 col-2">
-                    <div class="btn-group" role="group" aria-label="First group">
-                        <button type="button" class="btn rounded-pill border-0" style={{height: '50px', width: '50px', backgroundColor: '#DE8F5F', color: '#F4DFB6', position: 'sticky'}}><i class="fa fa-chevron-right fa-xl" style={{paddingTop: '.4rem'}}></i></button>
-                    </div>
-                </div>
-            
-            </div>
-        
-        </div>
+            </main>
         </div>
     );
 }
