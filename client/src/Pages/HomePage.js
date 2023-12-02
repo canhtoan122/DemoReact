@@ -1,6 +1,6 @@
 // Import your CSS files or use the CDN links directly within your component
 // import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'; // Assuming the URL is correct
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './HomePage.css';
 import Image1 from './Home Page Images/img-1.png';
@@ -19,14 +19,32 @@ import Image13 from './Home Page Images/motorbike.png';
 import Image14 from './Home Page Images/tow-truck.png';
 import Image15 from './Home Page Images/road.png';
 
-const customerData = () => {
-    // const firstName = document.getElementById('firstName').value;
-    console.log('Button clicked!');
-};
-const checkClick = () => {
-    console.log('Clicked!');
-};
 export const HomePage = () => {
+    const [formValues, setFormValues] = useState({
+                firstName: '',
+                lastName: '',
+                email: '',
+                message: '',
+            });
+    const handleInputChange = (e) => {
+                const { name, value } = e.target;
+                setFormValues((prevValues) => ({
+                    ...prevValues,
+                    [name]: value,
+                }));
+            };
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const response = await fetch('https://localhost:9000/submit', {
+        method: 'POST',
+        body: JSON.stringify(formValues),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+        });
+        const result = await response.json();
+        console.log(result);
+    };
     return (
         <div>
             <main>
@@ -219,29 +237,29 @@ export const HomePage = () => {
                     <div className="contact">
                         <h3>Gửi Yêu Cầu Giá Cước Vận Chuyển</h3>
                         <div className="contact_content">
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <div className="contact_item">
                                     <label htmlFor="firstName">Tên khách hàng <span>*</span> </label>
                                     <div>
                                         <span>
-                                            <input type="text" name="firstName" id="firstName" />
+                                            <input type="text" name="firstName" id="firstName" value={formValues.firstName} onChange={handleInputChange}/>
                                             <label htmlFor="firstName">First</label>
                                         </span>
                                         <span>
-                                            <input type="text" name="lastName" id="lastName" />
+                                            <input type="text" name="lastName" id="lastName" value={formValues.lastName} onChange={handleInputChange}/>
                                             <label htmlFor="lastName">Last</label>
                                         </span>
                                     </div>
                                 </div>
                                 <div className="contact_item">
                                     <label htmlFor="email">Email<span>*</span> </label>
-                                    <input type="email" name="email" id="email" />
+                                    <input type="email" name="email" id="email" value={formValues.email} onChange={handleInputChange}/>
                                 </div>
                                 <div className="contact_item">
-                                    <label htmlFor="email">Nội dung <span>*</span> </label>
-                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    <label htmlFor="message">Nội dung <span>*</span> </label>
+                                    <textarea name="message" id="message" cols="30" rows="10"value={formValues.message} onChange={handleInputChange}></textarea>
                                 </div>
-                                <button className="button" onSubmit={checkClick}>Hoàn tất</button>
+                                <button className="button">Hoàn tất</button>
                             </form>
                             <div className="contact_phone">
                                 <h4>Liên hệ để chuyển hàng</h4>

@@ -7,17 +7,17 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'bento',
+    database: 'test',
   });
 
 const util = require('util');
 const query = util.promisify(connection.query).bind(connection);
 const getStudent = async()=>{
-    const [row] = await query('SELECT * FROM cartitem where id = ?', [1]);
+    const [row] = await query('SELECT * FROM test where id = ?', [1]);
     return row;
 }
 const getAllStudent = async()=>{
-    const row = await query('SELECT * FROM cartitem');
+    const row = await query('SELECT * FROM test');
     return row;
 }
 
