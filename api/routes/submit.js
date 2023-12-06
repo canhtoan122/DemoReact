@@ -40,13 +40,32 @@
 // });
 // module.exports = router;
 
+// routes/submit.js
 var express = require("express");
 var router = express.Router();
+const mysql= require('mysql');
+const app = express();
 
-router.post("/", async(req, res) => {
+app.use(express.json()); // Place this line before your routes
+
+// Create a connection to the MySQL server
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'ctyphuocta',
+  });
+
+const util = require('util');
+const query = util.promisify(connection.query).bind(connection);
+const InsertCustomer = async()=>{
+    const row = await query('INSERT INTO ctyphuocta (name, phoneNumber, email, content) VALUES (${name}, ${phoneNumber}, ${email}, ${content}');
+    return row;
+}
+router.post("/", async (req, res) => {
     const data = req.body;
-    console.log(data);
-    res.json({ message: 'Data received successfully!' });
+    // const rows= await InsertCustomer();
+    res.json({ message: 'Data received and processed successfully!', data });
 });
 
 module.exports = router;

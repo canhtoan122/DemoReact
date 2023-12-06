@@ -37,6 +37,7 @@ export const HomePage = () => {
         event.preventDefault();
         const response = await fetch('https://localhost:9000/submit', {
         method: 'POST',
+        mode: "cors",
         body: JSON.stringify(formValues),
         headers: {
             'Content-Type': 'application/json'
@@ -53,7 +54,7 @@ export const HomePage = () => {
                         <div className="main_banner_left">
                             <h3>Vận tải Phước Tá</h3>
                             <h2>NÂNG NIU TRÊN TỪNG CÂY SỐ</h2>
-                            <p>Hà Lâm cung cấp các dịch vụ vận chuyển hàng hóa chất lượng cao, từ các dịch vụ chuyển hàng tiêu chuẩn cho đến hàng siêu
+                            <p>Phước Tá cung cấp các dịch vụ vận chuyển hàng hóa chất lượng cao, từ các dịch vụ chuyển hàng tiêu chuẩn cho đến hàng siêu
                             trường siêu trọng.</p>
                             <button href="#" className="button">Bắt đầu</button>
                         </div>
@@ -68,11 +69,11 @@ export const HomePage = () => {
                             <span>
                                 <i className="fa-solid fa-phone-volume"></i>
                             </span>
-                            <span>(055) 123 456</span>
+                            <span>0936131202</span>
                         </div>
                         <div className="main_infor_item">
                         <span><i className="fa-solid fa-clock"></i></span>
-                            <span>Arriving in 30 min</span>
+                            <span>Arriving in 4 days</span>
                         </div>
                         <div className="main_infor_item">
                             <span><i className="fa-solid fa-circle-check"></i></span>
@@ -91,7 +92,7 @@ export const HomePage = () => {
                         <div className="main_intro_right">
                             <h3>Tại sao chọn chúng tôi</h3>
                             <h2>GIỚI THIỆU VẬN TẢI PHƯỚC TÁ</h2>
-                            <p>Công Ty TNHH Dịch Vụ Vận Tải Hà Lâm được thành lập vào năm 2012, với kinh nghiệm 10 năm hoạt động trong ngành vận tải
+                            <p>Công Ty TNHH Dịch Vụ Vận Tải Phước Tá được thành lập vào năm 2012, với kinh nghiệm 10 năm hoạt động trong ngành vận tải
                             chúng tôi luôn đảm bảo hàng hóa được vận chuyển an toàn và đúng thời gian cho quý khách hàng. <br/><br />
                             
                             Vận Tải Hà Lâm chuyên vận chuyển hàng hóa từ Bắc vào Nam và các tỉnh nhỏ lẻ, với đội ngũ lái xe có nhiều năm kinh nghiệm
@@ -129,27 +130,25 @@ export const HomePage = () => {
                 </div>
                 <div className="container">
                     <div className="service">
-                        <h3>OUR SERVICES</h3>
-                        <h2>We transport your vehicle safely and efficiently</h2>
-                        <p>We are a well-equipped towing service available to help with towing a car 24/7 we provide a fast, affordable, friendly,
-                        and reliable car towing service.</p>
+                        <h3>Dịch vụ của chúng tôi</h3>
+                        <h2>Chúng tôi vận chuyển hàng hóa của bạn tới tận nơi nhanh và an toàn</h2>
+                        <p>Chúng tôi là một dịch vụ kéo xe được trang bị tốt sẵn sàng giúp vận chuyển hàng hóa 24/7, chúng tôi cung cấp dịch vụ nhanh chóng, giá cả phải chăng, thân thiện 
+                            và dịch vụ vận chuyển đáng tin cậy.</p>
                         <div className="service_list">
                             <div className="service_list_top">
                                 <div className="service_list_item">
                                     <span className="icon">
                                         <img src={Image11} alt="" />
                                     </span>
-                                    <h4>Emergency towing service</h4>
-                                    <p>We are a well-equipped towing service available to help with towing a car 24/7 we provide a fast, affordable,
-                                        friendly,
-                                        and reliable car towing service.</p>
+                                    <h4>Trường hợp khẩn cấp</h4>
+                                    <p>Nếu trong trưởng hợp khẩn cấp xe vận chuyển bị hỏng hay hàng hóa trong lúc vận chuyển bị hỏng thì chúng tôi sẽ đền bù theo giá thị trường.</p>
                                 </div>
                                 <div className="service_list_item">
                                     <span className="icon">
                                         <img src={Image12} alt="" />
                                     </span>
-                                    <h4>25% off emergency road service</h4>
-                                    <p>Favorable offer for new clients. Spend less time on web hosting and more time on your business.</p>
+                                    <h4>Giá cước vận chuyển</h4>
+                                    <p>Giá cước vận chuyển linh hoạt. Dành ít thời gian hơn cho những thủ tục rườm rà và dành nhiều thời gian hơn vào công việc kinh doanh của bạn.</p>
                                 </div>
                             </div>
                             <div className="service_list_bottom">
@@ -157,22 +156,22 @@ export const HomePage = () => {
                                     <span className="icon">
                                         <img src={Image13} alt="" />
                                     </span>
-                                    <h4>Car towing service</h4>
-                                    <p>We operate new, clean and professional towing vehicles and equipment.</p>
+                                    <h4>Dịch vụ vận chuyển</h4>
+                                    <p>Chúng tôi vận hành các phương tiện và thiết bị mới, nhanh chóng và chuyên nghiệp.</p>
                                 </div>
                                 <div className="service_list_item">
                                     <span className="icon">
                                         <img src={Image14} alt="" />
                                     </span>
-                                    <h4>Motorcycle towing</h4>
-                                    <p>We operate new, clean and professional towing vehicles and equipment.</p>
+                                    <h4>Dịch vụ vận chuyển đường ngắn</h4>
+                                    <p>Chúng tôi vận chuyển tuyến đường ngắn bằng xe tải tới địa chỉ nhận hàng nhanh chóng và chuyên nghiệp.</p>
                                 </div>
                                 <div className="service_list_item">
                                     <span className="icon">
                                         <img src={Image15} alt="" />
                                     </span>
-                                    <h4>Long distance towing</h4>
-                                    <p>We operate new, clean and professional towing vehicles and equipment.</p>
+                                    <h4>Dịch vụ vận chuyển đường dài</h4>
+                                    <p>Chúng tôi vận chuyển tuyến đường dài bằng tàu hỏa tới ga gần nhất và luôn luôn cập nhật tiến độ của tàu cho khách hàng.</p>
                                 </div>
                             </div>
                             
@@ -180,14 +179,14 @@ export const HomePage = () => {
                     </div>
                     <div className="question">
                         <h3>FAQ</h3>
-                        <h2>Popular questions answered</h2>
-                        <p>We are a well-equipped towing service available to help with towing a car 24/7 we provide a fast, affordable, friendly,
-                        and reliable car towing service.</p>
+                        <h2>Một số câu hỏi thường gặp</h2>
+                        <p>Chúng tôi là một dịch vụ vận tải được trang bị tốt sẵn sàng cập nhật khách hàng 24/7, chúng tôi cung cấp dịch vụ nhanh chóng, giá cả phải chăng, thân thiện 
+                            và dịch vụ vận tải đáng tin cậy.</p>
                         <ul className="question_list">
                             <li>
                                 <span><i className="fa-solid fa-circle-question"></i></span>
                                 <div>
-                                    <h4>How long will I be without my car?</h4>
+                                    <h4>Thời gian vận chuyển là bao lâu?</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                     aliqua.</p>
                                 </div>
@@ -195,7 +194,7 @@ export const HomePage = () => {
                             <li>
                                 <span><i className="fa-solid fa-circle-question"></i></span>
                                 <div>
-                                    <h4>How long will I be without my car?</h4>
+                                    <h4>Giá cước vận chuyển là bao nhiêu?</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                     aliqua.</p>
                                 </div>
@@ -203,7 +202,7 @@ export const HomePage = () => {
                             <li>
                                 <span><i className="fa-solid fa-circle-question"></i></span>
                                 <div>
-                                    <h4>How long will I be without my car?</h4>
+                                    <h4>Quá trình vận chuyển có an toàn ko?</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                     aliqua.</p>
                                 </div>
@@ -211,7 +210,7 @@ export const HomePage = () => {
                             <li>
                                 <span><i className="fa-solid fa-circle-question"></i></span>
                                 <div>
-                                    <h4>How long will I be without my car?</h4>
+                                    <h4>Có chế độ bồi thường hàng hóa khi bị mất mát hư hỏng ko?</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                     aliqua.</p>
                                 </div>
@@ -219,7 +218,7 @@ export const HomePage = () => {
                             <li>
                                 <span><i className="fa-solid fa-circle-question"></i></span>
                                 <div>
-                                    <h4>How long will I be without my car?</h4>
+                                    <h4>Có đảm bảo thông tin về hàng hóa cho khách hàng ko?</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                     aliqua.</p>
                                 </div>
@@ -227,7 +226,7 @@ export const HomePage = () => {
                             <li>
                                 <span><i className="fa-solid fa-circle-question"></i></span>
                                 <div>
-                                    <h4>How long will I be without my car?</h4>
+                                    <h4>Có các dịch vụ hỗ trợ như bốc xếp, kho bãi, vận chuyển từ kho tới kho không?</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                     aliqua.</p>
                                 </div>
