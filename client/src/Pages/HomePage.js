@@ -34,16 +34,16 @@ export const HomePage = () => {
                 }));
             };
     const handleSubmit = async (event) => {
-        event.preventDefault();
-        const response = await fetch('https://localhost:9000/submit', {
-        method: 'POST',
-        body: JSON.stringify(formValues),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-        });
-        const result = await response.json();
-        console.log(result);
+        // event.preventDefault();
+        // const response = await fetch('https://localhost:9000/submit', {
+        // method: 'POST',
+        // body: JSON.stringify(formValues),
+        // headers: {
+        //     'Content-Type': 'application/json'
+        // }
+        // });
+        // const result = await response.json();
+        console.log(formValues);
     };
     return (
         <div>
