@@ -6,31 +6,45 @@ const bodyParser = require('body-parser');
 
 router.use(bodyParser.urlencoded({ extended: true }));
 
-router.post("/", async(req, res) => {
-    const transporter = nodemailer.createTransport({
-        host: "smtp.forwardemail.net",
-        port: 465,
-        secure: true,
-        auth: {
-          // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-          user: "minhclonevn1@gmail.com",
-          pass: "fziofvsktysszzvq",
-        },
-      });
-      
-      // async..await is not allowed in global scope, must use a wrapper
-      async function main() {
-        // send mail with defined transport object
-        const info = await transporter.sendMail({
-          from: 'minhclonevn1@gmail.com', // sender address
-          to: "nguyencanhtoan200@gmail.com", // list of receivers
-          subject: "Hello ✔", // Subject line
-          text: "Hello world?", // plain text body
-          html: "<b>Hello world?</b>", // html body
-        });
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false,
+  auth: {
+    // TODO: replace `user` and `pass` values from <https://forwardemail.net>
+    user: 'nguyencanhtoan200@gmail.com',
+    pass: 'thba ztnm qmtb nkns',
+  },
+});
+const sendMail = async (transporter, mailOption) => {
+  try{
+    await transporter.sendMail(mailOption);
+    console.log("Email has been send");
+  } catch(error){
+    console.log(error);
+  }
+}
+
+router.post("/", async (req, res) => {
+  try{
+    const { firstName, lastName, email, message } = req.body;
+    const mailOption = {
+      from: 'nguyencanhtoan200@gmail.com', // sender address
+      to: '${email}', // list of receivers
+      subject: "Yêu cầu vận tải", // Subject line
+      text: `
+              First Name: ${firstName}
+              Last Name: ${lastName}
+              Email: ${email}
+              Message: ${message}
+          `,
+      html: "<b>Hello world?</b>", // html body
     }
-    res.end('Send Success');
-      
+    sendMail(transporter, mailOption);
+  } catch(error){
+    res.end("Email has been send");
+  }
 });
 
 module.exports = router;
