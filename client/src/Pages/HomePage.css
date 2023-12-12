@@ -442,6 +442,16 @@
     z-index: 1;
 }
 
+.contact_item select{
+    height: 40px;
+}
+.contact_item select option{
+    line-height: 50px;
+}
+.result{
+    margin-top: 40px;
+}
+
 @media screen and (max-width: 1024px) {
 
     .main_banner_wrapper,

@@ -21,10 +21,11 @@ import Image15 from './Home Page Images/road.png';
 
 export const HomePage = () => {
     const [formValues, setFormValues] = useState({
-                firstName: '',
-                lastName: '',
+                name: '',
+                phoneNumber: '',
                 email: '',
                 message: '',
+                type: 'default',
             });
     const handleInputChange = (e) => {
                 const { name, value } = e.target;
@@ -34,16 +35,17 @@ export const HomePage = () => {
                 }));
             };
     const handleSubmit = async (event) => {
-        // event.preventDefault();
-        // const response = await fetch('https://localhost:9000/submit', {
-        // method: 'POST',
-        // body: JSON.stringify(formValues),
-        // headers: {
-        //     'Content-Type': 'application/json'
-        // }
-        // });
-        // const result = await response.json();
-        console.log(formValues);
+        event.preventDefault();
+        const response = await fetch('http://localhost:9000/submit', {
+        method: 'POST',
+        body: JSON.stringify(formValues),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+        });
+        const result = await response.text();
+        const notification = document.getElementById('result');
+        notification.textContent = result;
     };
     return (
         <div>
@@ -53,7 +55,7 @@ export const HomePage = () => {
                         <div className="main_banner_left">
                             <h3>Vận tải Phước Tá</h3>
                             <h2>NÂNG NIU TRÊN TỪNG CÂY SỐ</h2>
-                            <p>Hà Lâm cung cấp các dịch vụ vận chuyển hàng hóa chất lượng cao, từ các dịch vụ chuyển hàng tiêu chuẩn cho đến hàng siêu
+                            <p>Phước Tá cung cấp các dịch vụ vận chuyển hàng hóa chất lượng cao, từ các dịch vụ chuyển hàng tiêu chuẩn cho đến hàng siêu
                             trường siêu trọng.</p>
                             <button href="#" className="button">Bắt đầu</button>
                         </div>
@@ -68,15 +70,15 @@ export const HomePage = () => {
                             <span>
                                 <i className="fa-solid fa-phone-volume"></i>
                             </span>
-                            <span>(055) 123 456</span>
+                            <span>(0937) 067 986</span>
                         </div>
                         <div className="main_infor_item">
                         <span><i className="fa-solid fa-clock"></i></span>
-                            <span>Arriving in 30 min</span>
+                            <span>Đến nơi trong vòng 4 ngày</span>
                         </div>
                         <div className="main_infor_item">
                             <span><i className="fa-solid fa-circle-check"></i></span>
-                            <span>No hidden fees</span>
+                            <span>Không chi phí phát sinh</span>
                         </div>
                     </div>
                 </div>
@@ -100,7 +102,7 @@ export const HomePage = () => {
                             Hiện tại, vận tải Hà Lâm có nhiều dịch vụ trong ngành vận tải để phục vụ khách hàng, Trong đó, dịch vụ vận chuyển hàng
                             hóa được ưu tiên và chú trọng nhất với mục tiêu đáp ứng nhanh nhất những yêu cầu về vận chuyển hàng hóa. Nếu quý khách
                             có nhu cầu vận chuyển hàng hóa đến bất kỳ nơi nào, chúng tôi đều có khả năng đáp ứng.</p>
-                            <button className="button">Call us now</button>
+                            <button className="button">Gọi Ngay</button>
                         </div>
                     </div>
                     <div className="main_brand">
@@ -239,17 +241,27 @@ export const HomePage = () => {
                         <div className="contact_content">
                             <form onSubmit={handleSubmit}>
                                 <div className="contact_item">
-                                    <label htmlFor="firstName">Tên khách hàng <span>*</span> </label>
+                                    <label htmlFor="firstName">Tên khách hàng và số điện thoại <span>*</span> </label>
                                     <div>
                                         <span>
-                                            <input type="text" name="firstName" id="firstName" value={formValues.firstName} onChange={handleInputChange}/>
-                                            <label htmlFor="firstName">First</label>
+                                            <input type="text" name="name" id="name" value={formValues.name} onChange={handleInputChange}/>
+                                            <label htmlFor="name">Họ và tên</label>
                                         </span>
                                         <span>
-                                            <input type="text" name="lastName" id="lastName" value={formValues.lastName} onChange={handleInputChange}/>
-                                            <label htmlFor="lastName">Last</label>
+                                            <input type="text" name="phoneNumber" id="phoneNumber" value={formValues.phoneNumber} onChange={handleInputChange}/>
+                                            <label htmlFor="phoneNumber">Số điện thoại</label>
                                         </span>
                                     </div>
+                                </div>
+                                <div className="contact_item">
+                                    <label htmlFor="type">Dịch vụ vận chuyển<span>*</span> </label>
+                                    <select id="type" name="type" value={formValues.type} onChange={handleInputChange}>
+                                        <option value="default">--------------</option>
+                                        <option value="Kho tới kho">Kho tới kho</option>
+                                        <option value="Ga tới ga">Ga tới ga</option>
+                                        <option value="Kho tới ga">Kho tới ga</option>
+                                        <option value="Ga tới kho">Ga tới kho</option>
+                                    </select>
                                 </div>
                                 <div className="contact_item">
                                     <label htmlFor="email">Email<span>*</span> </label>
@@ -260,11 +272,12 @@ export const HomePage = () => {
                                     <textarea name="message" id="message" cols="30" rows="10"value={formValues.message} onChange={handleInputChange}></textarea>
                                 </div>
                                 <button className="button">Hoàn tất</button>
+                                <p id='result' className='result'></p>
                             </form>
                             <div className="contact_phone">
                                 <h4>Liên hệ để chuyển hàng</h4>
                                 <span className="line"></span>
-                                <p>Hotline: <br/> 0123 456 789</p>
+                                <p>Hotline: <br/> 0937 067 986</p>
                             </div>
                         </div>
                     </div>
