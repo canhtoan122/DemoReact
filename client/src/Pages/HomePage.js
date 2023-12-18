@@ -93,13 +93,13 @@ export const HomePage = () => {
                         <div className="main_intro_right">
                             <h3>Tại sao chọn chúng tôi</h3>
                             <h2>GIỚI THIỆU VẬN TẢI PHƯỚC TÁ</h2>
-                            <p>Công Ty TNHH Dịch Vụ Vận Tải Hà Lâm được thành lập vào năm 2012, với kinh nghiệm 10 năm hoạt động trong ngành vận tải
+                            <p>Công Ty TNHH Dịch Vụ Vận Tải Phước Tá được thành lập vào năm 2012, với kinh nghiệm 10 năm hoạt động trong ngành vận tải
                             chúng tôi luôn đảm bảo hàng hóa được vận chuyển an toàn và đúng thời gian cho quý khách hàng. <br/><br />
                             
-                            Vận Tải Hà Lâm chuyên vận chuyển hàng hóa từ Bắc vào Nam và các tỉnh nhỏ lẻ, với đội ngũ lái xe có nhiều năm kinh nghiệm
+                            Vận Tải Phước Tá chuyên vận chuyển hàng hóa từ Bắc vào Nam và các tỉnh nhỏ lẻ, với đội ngũ lái xe có nhiều năm kinh nghiệm
                             chạy xuyên suốt trên các tuyến đường trên lãnh thổ Việt Nam.<br/><br/>
                             
-                            Hiện tại, vận tải Hà Lâm có nhiều dịch vụ trong ngành vận tải để phục vụ khách hàng, Trong đó, dịch vụ vận chuyển hàng
+                            Hiện tại, vận tải Phước Tá có nhiều dịch vụ trong ngành vận tải để phục vụ khách hàng, Trong đó, dịch vụ vận chuyển hàng
                             hóa được ưu tiên và chú trọng nhất với mục tiêu đáp ứng nhanh nhất những yêu cầu về vận chuyển hàng hóa. Nếu quý khách
                             có nhu cầu vận chuyển hàng hóa đến bất kỳ nơi nào, chúng tôi đều có khả năng đáp ứng.</p>
                             <button className="button">Gọi Ngay</button>
@@ -131,7 +131,7 @@ export const HomePage = () => {
                 </div>
                 <div className="container">
                     <div className="service">
-                        <h3>OUR SERVICES</h3>
+                        <h3>Dịch vụ của chúng tôi</h3>
                         <h2>We transport your vehicle safely and efficiently</h2>
                         <p>We are a well-equipped towing service available to help with towing a car 24/7 we provide a fast, affordable, friendly,
                         and reliable car towing service.</p>
