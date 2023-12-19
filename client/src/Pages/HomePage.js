@@ -18,6 +18,8 @@ import Image12 from './Home Page Images/g53.png';
 import Image13 from './Home Page Images/motorbike.png';
 import Image14 from './Home Page Images/tow-truck.png';
 import Image15 from './Home Page Images/road.png';
+import Image16 from './Home Page Images/train.png';
+import { Link } from 'react-router-dom';
 
 export const HomePage = () => {
     const [formValues, setFormValues] = useState({
@@ -57,7 +59,7 @@ export const HomePage = () => {
                             <h2>NÂNG NIU TRÊN TỪNG CÂY SỐ</h2>
                             <p>Phước Tá cung cấp các dịch vụ vận chuyển hàng hóa chất lượng cao, từ các dịch vụ chuyển hàng tiêu chuẩn cho đến hàng siêu
                             trường siêu trọng.</p>
-                            <button href="#" className="button">Bắt đầu</button>
+                            <Link to="/Start"><button className="button">Bắt đầu</button></Link>
                         </div>
                         <div className="main_banner_right">
                             <img src={Image1} alt="" />
@@ -132,49 +134,54 @@ export const HomePage = () => {
                 <div className="container">
                     <div className="service">
                         <h3>Dịch vụ của chúng tôi</h3>
-                        <h2>We transport your vehicle safely and efficiently</h2>
-                        <p>We are a well-equipped towing service available to help with towing a car 24/7 we provide a fast, affordable, friendly,
-                        and reliable car towing service.</p>
+                        <h2>Chúng tôi vận chuyển hàng hóa của bạn một cách an toàn và nhanh chóng.</h2>
+                        <p>Chúng tôi là một dịch vụ vận tải được trang bị tốt sẵn sàng nhận yêu cầu vận chuyển 24/7, chúng tôi cung cấp dịch vụ nhanh chóng, giá cả phải chăng,
+                            thân thiện và đáng tin cậy.
+                        </p>
                         <div className="service_list">
                             <div className="service_list_top">
                                 <div className="service_list_item">
                                     <span className="icon">
                                         <img src={Image11} alt="" />
                                     </span>
-                                    <h4>Emergency towing service</h4>
-                                    <p>We are a well-equipped towing service available to help with towing a car 24/7 we provide a fast, affordable,
-                                        friendly,
-                                        and reliable car towing service.</p>
+                                    <h4>Tình huống khẩn cấp</h4>
+                                    <p>Đối với những tình huống khẩn cấp như hỏng hàng, mất hàng trong quá trình vận chuyển thì bên chúng tôi sẽ cập nhật tình trạng hàng hóa
+                                        cho khách hàng và đền bù theo giá thị trường.
+                                    </p>
                                 </div>
                                 <div className="service_list_item">
                                     <span className="icon">
                                         <img src={Image12} alt="" />
                                     </span>
-                                    <h4>25% off emergency road service</h4>
-                                    <p>Favorable offer for new clients. Spend less time on web hosting and more time on your business.</p>
+                                    <h4>Giảm giá cước vận chuyển</h4>
+                                    <p>Đối với những khách hàng mới, sẽ có ưu đãi về giá cước vận chuyển. Tốn ít thời gian và tiền bạc hơn 
+                                        mà dành nhiều thời gian hơn cho doanh nghiệp của bạn.
+                                        </p>
                                 </div>
                             </div>
                             <div className="service_list_bottom">
                                 <div className="service_list_item">
                                     <span className="icon">
-                                        <img src={Image13} alt="" />
+                                        <img src={Image16} alt="" />
                                     </span>
-                                    <h4>Car towing service</h4>
-                                    <p>We operate new, clean and professional towing vehicles and equipment.</p>
+                                    <h4>Dịch vụ vận chuyển đường dài (từ ga đến ga)</h4>
+                                    <p>Luôn cập nhật tiến độ cho khách hàng từ lúc dỡ hàng hóa lên tàu cho đến lúc tàu chạy đến ga cần đến.</p>
                                 </div>
                                 <div className="service_list_item">
                                     <span className="icon">
                                         <img src={Image14} alt="" />
                                     </span>
-                                    <h4>Motorcycle towing</h4>
-                                    <p>We operate new, clean and professional towing vehicles and equipment.</p>
+                                    <h4>Dịch vụ vận chuyển từ kho đến kho</h4>
+                                    <p>Luôn cập nhật tiến độ cho khách hàng từ lúc bốc xếp dỡ hàng ở kho đối tác của bạn tới kho doanh nghiệp của bạn và trong quá trình 
+                                        nếu có vấn đề thì sẽ lập tức báo cho bạn ngay lập tức.
+                                        </p>
                                 </div>
                                 <div className="service_list_item">
                                     <span className="icon">
                                         <img src={Image15} alt="" />
                                     </span>
-                                    <h4>Long distance towing</h4>
-                                    <p>We operate new, clean and professional towing vehicles and equipment.</p>
+                                    <h4>Dịch vụ vận chuyển đường ngắn (từ kho tới ga)</h4>
+                                    <p>Luôn cập nhật tiến độ cho khách hàng từ lúc xếp dỡ từ kho lên xe tải và luôn quan sát quá trình tàu chạy và xe chạy.</p>
                                 </div>
                             </div>
                             
@@ -182,56 +189,53 @@ export const HomePage = () => {
                     </div>
                     <div className="question">
                         <h3>FAQ</h3>
-                        <h2>Popular questions answered</h2>
-                        <p>We are a well-equipped towing service available to help with towing a car 24/7 we provide a fast, affordable, friendly,
-                        and reliable car towing service.</p>
+                        <h2>Những câu hỏi phổ biến</h2>
+                        <p>Chúng tôi là một dịch vụ vận chuyển được trang bị tốt sẵn sàng hỗ trợ khách hàng 24/7, chúng tôi cung cấp dịch vụ nhanh chóng, giá cả linh hoạt, thân thiện,
+                            và dịch vụ vận chuyển đánh tin cậy.
+                        </p>
                         <ul className="question_list">
                             <li>
                                 <span><i className="fa-solid fa-circle-question"></i></span>
                                 <div>
-                                    <h4>How long will I be without my car?</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua.</p>
+                                    <h4>Thời gian vận chuyển là bao lâu?</h4>
+                                    <p>Thường thì sẽ là 4 ngày từ khi báo kế hoạch vận chuyển nhưng tùy theo khối lượng cũng như loại dịch vụ mà thời gian vận chuyển có thể thay đổi.</p>
                                 </div>
                             </li>
                             <li>
                                 <span><i className="fa-solid fa-circle-question"></i></span>
                                 <div>
-                                    <h4>How long will I be without my car?</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua.</p>
+                                    <h4>Giá cước vận chuyển là bao nhiêu?</h4>
+                                    <p>Thường thì sẽ tùy theo khối lượng, loại hàng, loại dịch vụ,... và sẽ báo giá trước 1 ngày dựa theo thông tin đã cung cấp.</p>
                                 </div>
                             </li>
                             <li>
                                 <span><i className="fa-solid fa-circle-question"></i></span>
                                 <div>
-                                    <h4>How long will I be without my car?</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua.</p>
+                                    <h4>Có an toàn không?</h4>
+                                    <p>Chúng tôi là dịch vụ vận tải với hơn 10 năm hoạt động trong ngành và được trang bị tốt nhất để hỗ trợ khách hàng 24/7.</p>
                                 </div>
                             </li>
                             <li>
                                 <span><i className="fa-solid fa-circle-question"></i></span>
                                 <div>
-                                    <h4>How long will I be without my car?</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua.</p>
+                                    <h4>Có chế độ bồi thường hàng hóa khi bị mất mát hư hỏng không?</h4>
+                                    <p>Trong những trường hợp trong quá trình vận chuyển hàng hóa bị mất mát hư hỏng thì công ti sẽ đền bù hàng hóa đã mất mát hư hỏng 
+                                        dựa theo giá thị trường.</p>
                                 </div>
                             </li>
                             <li>
                                 <span><i className="fa-solid fa-circle-question"></i></span>
                                 <div>
-                                    <h4>How long will I be without my car?</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua.</p>
+                                    <h4>Có đảm bảo thông tin về hàng hóa cho khách hàng không?</h4>
+                                    <p>Sau khi nhận thông tin khách hàng thì công ti sẽ gọi đến số điện thoại đã được cung cấp và lên hợp đồng thỏa thuận giữa 2 bên và 
+                                        bảo mật thông tin khách hàng cũng được làm vào lúc này.</p>
                                 </div>
                             </li>
                             <li>
                                 <span><i className="fa-solid fa-circle-question"></i></span>
                                 <div>
-                                    <h4>How long will I be without my car?</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua.</p>
+                                    <h4>Có các dịch vụ hỗ trợ như bốc xếp, kho bãi, vận chuyển từ kho tới kho không?</h4>
+                                    <p>Có và nếu có dịch vụ phát sinh thì tất cả phải được làm rõ trước khi lên hợp đồng giữa 2 bên.</p>
                                 </div>
                             </li>
                         </ul>

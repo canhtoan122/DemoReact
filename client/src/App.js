@@ -5,6 +5,7 @@ import { HomePage } from './Pages/HomePage';
 import { GameDetailPage } from './Pages/GameDetailPage';
 import { NotFoundPage } from './Pages/NotFoundPage';
 import { Cart } from './Pages/Cart';
+import { Start } from './Pages/Start';
 
 // import logo from './logo.svg';
 import './App.css';
@@ -49,6 +50,7 @@ export const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/Start" element={<Start />} />
         <Route path="/games/:gameId" element={<GameDetailPage />} />
         <Route path="/cart" element={<Cart />} />
         <Route  element={<NotFoundPage />} />
