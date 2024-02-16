@@ -69,6 +69,7 @@ header {
 .header_logo {
     max-width: 200px;
     overflow: hidden;
+    text-align: center;
 }
 
 .header_menu {
