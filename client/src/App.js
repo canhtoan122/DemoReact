@@ -8,7 +8,7 @@ import { Cart } from './Pages/Cart';
 import { Start } from './Pages/Start';
 
 // import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 // import { render } from '../../api/app';
 
 // class App extends React.Component{
